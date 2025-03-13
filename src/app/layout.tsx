@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,18 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const queryClient = new QueryClient();
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main>
-          <QueryClientProvider client={queryClient}>
+        <main className="flex-grow items-center">
+         <Providers>
             {children}
-          </QueryClientProvider>
+         </Providers>
         </main>
         <Footer />
       </body>
