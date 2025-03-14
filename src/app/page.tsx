@@ -1,15 +1,13 @@
 import { MovieList } from "../components/ui/movie-list";
-import { searchParams } from "./types/SearchParams";
-
-interface HomeProps{
-  searchParams: searchParams
-}
+import { params } from "./types/SearchParams";
 
 
-export default function Home({searchParams}: HomeProps) {
+export default async function Home({searchParams}: params) {
+    const {page, pageSize} = await searchParams
+
   return (
     <div className="items-center justify-items-center gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <MovieList params={searchParams}/>
+      <MovieList page={page} pageSize={pageSize}/>
       
     </div>
   );
