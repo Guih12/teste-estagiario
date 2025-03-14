@@ -20,8 +20,8 @@ export const MovieList = () => {
     if (error) return <p className="text-2xl text-muted-foreground"> An error occurred: {error.message} </p>
 
     return (
-        <section className="w-full flex flex-col items-center justify-center py-8 mt-[450px]">
-            <div className="grid grid-flow-row grid-cols-2 justify-items-center gap-4 w-full">
+        <section>
+            <div className="grid grid-cols-4 grid-flow-row gap-4">
                 {data.results && data.results.map((value, index) => (
                   <MovieCard {...value} key={index}/>
                 ))}

@@ -30,10 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-3`}
       >
         <Header />
-        <main className="flex-grow items-center">
+        <main className="items-center flex flex-col">
          <Providers>
             {children}
          </Providers>

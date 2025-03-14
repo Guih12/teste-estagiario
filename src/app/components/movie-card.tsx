@@ -6,12 +6,11 @@ import Image from "next/image"
 export const MovieCard = ({title, overview, adult , id, backdrop_path}: Result) =>{
     const imagePath =  `https://image.tmdb.org/t/p/original${backdrop_path}`
     return(
-       <div className="flex flex-col items-center justify-center">
+       <div className="flex flex-col items-center justify-center border-1 border-white shadow-lg">
             <Image src={imagePath} alt={`${title} movie`} width={250} height={250}/>
             <h1>{title}</h1>
-            
             <p>
-                {/* <span className="text-sm">{overview}</span> */}
+                <span className="text-sm">{overview}</span>
             </p>
        </div>
 
