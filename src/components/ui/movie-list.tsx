@@ -4,6 +4,7 @@ import { getTrendingMovies } from "../../app/actions/getTrendingMovies"
 import { MovieCard } from "./movie-card"
 import { PaginationWithLinks } from "./pagination-with-links"
 import { searchParams } from "@/app/types/SearchParams"
+import { Loader2Icon } from "lucide-react"
 
 
 export const MovieList = ({ page, pageSize }: searchParams) => {
@@ -17,9 +18,13 @@ export const MovieList = ({ page, pageSize }: searchParams) => {
 
 
 
-    if (isPending) return 'Loading...'
-
-    if (error) return <p className="text-2xl text-muted-foreground"> An error occurred: {error.message} </p>
+    if (isPending) return (
+        <div className="relative flex flex-col items-center">
+            <p className="text-5xl text-muted-foreground">Loading...</p>
+            <Loader2Icon className="animate-spin duration-500 h-25 w-20"/>
+        </div>
+    )
+    if (error)  return (<p className="text-2xl text-muted-foreground"> An error occurred: {error.message} </p>)
 
     return (
         <section>
