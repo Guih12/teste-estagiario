@@ -7,7 +7,6 @@ import { Input } from "./input";
 import { useMutation } from "@tanstack/react-query";
 import { createComment } from "@/app/actions/createComment";
 import { Button } from "./button";
-import { useState } from "react";
 import { Send } from "lucide-react";
 
 type CommentsProps = {
@@ -17,7 +16,6 @@ type CommentsProps = {
 
 export const InsertComment = ({ movie_id }: CommentsProps) => {
 
-    const [message, setMessage] = useState<boolean>(false)
 
     const form = useForm<CommentsValues>(
         {
@@ -41,9 +39,6 @@ export const InsertComment = ({ movie_id }: CommentsProps) => {
     const onSubmitForm: SubmitHandler<CommentsValues> = async (data) => {
         try {
             mutation.mutate(data)
-            if (mutation.isSuccess) {
-                setMessage(true)
-            }
             form.reset();
         } catch (err) {
             throw err;

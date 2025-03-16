@@ -1,5 +1,5 @@
 
-import { commentsSchema, CommentsValues } from "@/app/types/validation/comments";
+import { commentsSchema} from "@/app/types/validation/comments";
 import { supabase } from "@/lib/supabase/store";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest){
         return NextResponse.json({success: true, id: data.id}, {status: 200});
 
 
-    } catch(error){
+    } catch {
         return NextResponse.json({error: 'Internal server error'}, {status: 500})
     }
     

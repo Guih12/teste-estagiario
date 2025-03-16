@@ -1,7 +1,7 @@
 
 
 export type params = {
-    searchParams: searchParams
+    searchParams: Promise<searchParams>
 }
 
 export type searchParams = {

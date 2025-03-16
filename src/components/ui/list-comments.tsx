@@ -1,7 +1,6 @@
 import { getComments } from "@/app/actions/getComments";
-import { CommentsValues } from "@/app/types/validation/comments";
 import { useQuery } from "@tanstack/react-query";
-import { RefreshCw, StarsIcon, User } from "lucide-react";
+import { RefreshCw,  User } from "lucide-react";
 import { Button } from "./button";
 
 
