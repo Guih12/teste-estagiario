@@ -1,19 +1,10 @@
 .test {
-    padding-top: 64px;
+    padding-top: 56px;
 }
 
-.movie-card {
-    color: #FFFFFF;
-    
-    .movie-title {
-        color: #000FFF;
-    }
-
-    .description {
-        color: #FFF000;
-    }
-
-    .movie-year {
-        color: #FF0000;
-    }
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
 }
