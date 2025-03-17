@@ -20,6 +20,8 @@
 - **Home**: Lists the movies through a pagination system.
 - **Movie Details**: Displays the movie details, such as rating, full overview, comments section, and more.
 
+<p>:sparkles: You can preview this project <a href='https://teste-estagiario.vercel.app/?page=1'>here</a></p>
+
 ## :books: Technologies
 
 This project was built using the following technologies and libraries:
