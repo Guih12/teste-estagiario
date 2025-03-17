@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParamsManager } from "@/hooks/use-search-params";
-import { useGetMoviesListByPageQuery } from "../hooks/react-query/queries/use-get-movies-list-by-page-query";
+import { useGetMoviesListByPageQuery } from "../../hooks/react-query/queries/use-get-movies-list-by-page-query";
 import { MovieCard } from "./movie-card";
 
 export function MoviesDisplay() {

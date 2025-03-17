@@ -1,6 +1,6 @@
 import { useSearchParamsManager } from "@/hooks/use-search-params";
 import { useEffect } from "react";
-import { useGetMoviesListByPageQuery } from "../../hooks/react-query/queries/use-get-movies-list-by-page-query";
+import { useGetMoviesListByPageQuery } from "../../../hooks/react-query/queries/use-get-movies-list-by-page-query";
 
 export function usePagination() {
   const searchParams = useSearchParamsManager();
