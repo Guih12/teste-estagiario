@@ -1,3 +1,0 @@
-GET https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMDE5NjliMzdlZTBhY2FjZWVhMjBjOTRlNjY0MzY2YSIsIm5iZiI6MTc0MjA5NzM5Ni4xODMsInN1YiI6IjY3ZDY0YmY0NTk2M2ViZmZkZTdiZGY2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8vJdWD4j87odM1gor5Xs0FEM3R43rvzWmqkpnOG8OXw
