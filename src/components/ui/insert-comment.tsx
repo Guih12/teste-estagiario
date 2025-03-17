@@ -66,7 +66,7 @@ export const InsertComment = ({ movie_id }: CommentsProps) => {
                             )}
                         />
 
-                        <div className="flex flex-row gap-3">
+                        <div className="flex flex-row items-center gap-3 sm:items-start sm:justify-start lg:justify-start">
 
                             <FormField
                                 control={form.control}
@@ -85,12 +85,12 @@ export const InsertComment = ({ movie_id }: CommentsProps) => {
                             <Button
                                 type="submit"
                                 disabled={form.formState.isSubmitting}
-                                variant={"default"}
-                                className="w-1/5 self-center mt-5"
+                                variant="default"
+                                className="w-1/5 p-2 sm:w-1/4 sm:p-4 lg:w-1/3 lg:p-2 mt-5 text-sm sm:text-xs lg:text-md text-center"
                             >
-                                <Send/>
-                                Send comment
+                                <Send className="h-4 w-4 sm:h-3 sm:w-3" />
                             </Button>
+
                         </div>
                     </div>
                 </form>
