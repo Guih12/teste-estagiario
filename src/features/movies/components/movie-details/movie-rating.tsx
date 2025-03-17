@@ -14,7 +14,7 @@ export function MovieRating({ movieId }: Props) {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-center gap-2 md:flex-row md:gap-0">
       <div className="flex items-center">
         {movieDetails?.vote_average && (
           <>
@@ -36,9 +36,9 @@ export function MovieRating({ movieId }: Props) {
         )}
       </div>
 
-      <span className="ml-2">
+      <div className="md:ml-2">
         {movieDetails?.vote_average}/10.0 ({movieDetails?.vote_count} votes)
-      </span>
+      </div>
     </div>
   );
 }
