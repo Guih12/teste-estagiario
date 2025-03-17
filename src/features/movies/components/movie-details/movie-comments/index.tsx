@@ -12,7 +12,7 @@ export function MovieComments({ movieId }: Props) {
   const { data: comments } = useGetMovieCommentsQuery({ movieId });
 
   return (
-    <section className="flex flex-col gap-3">
+    <section className="flex w-full flex-col gap-3">
       <article className="flex items-center gap-4">
         <Typography variant="h3">Comments</Typography>
         <PostCommentForm movieId={movieId} />

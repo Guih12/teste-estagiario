@@ -19,16 +19,18 @@ export function MovieDetails({ movieId }: Props) {
   const isProfitable = profit > 0;
 
   return (
-    <section className="flex max-w-2/3 flex-col gap-4">
-      <article className="flex items-center gap-4">
+    <section className="flex w-full flex-col items-center gap-8 md:max-w-2/3 md:items-start md:gap-4">
+      <article className="flex flex-col items-center gap-3 md:flex-row md:gap-4">
         <MovieAgeClassification movieId={movieId} />
-        <Typography variant="h2">{movie.title}</Typography>
+        <Typography variant="h2" className="text-center">
+          {movie.title}
+        </Typography>
         <Typography variant="lead">
           ({movie.release_date.slice(0, 4)})
         </Typography>
       </article>
 
-      <article className="flex flex-wrap items-center gap-2">
+      <article className="flex flex-col flex-wrap items-center gap-2 md:flex-row">
         <Typography variant="p">
           {movie.release_date.split("-").reverse().join("/")}
         </Typography>
@@ -71,18 +73,20 @@ export function MovieDetails({ movieId }: Props) {
         </article>
       </article>
 
-      <article>
+      <article className="flex flex-col items-center gap-3 md:items-start">
         <Typography variant="h4">Overview</Typography>
-        <Typography variant="p">{movie.overview}</Typography>
+        <Typography variant="p" className="text-center md:text-start">
+          {movie.overview}
+        </Typography>
       </article>
 
-      <article className="flex items-center gap-2">
+      <article className="flex flex-col items-center gap-2 md:flex-row">
         <Typography variant="p">
           Budget:{" "}
           <span className="text-red-400">-{formatCurrency(movie.budget)}</span>
         </Typography>
 
-        <div className="h-1 w-1 rounded-full bg-white" />
+        <div className="hidden h-1 w-1 rounded-full bg-white md:flex" />
 
         <Typography variant="p">
           Revenue:{" "}
@@ -91,7 +95,7 @@ export function MovieDetails({ movieId }: Props) {
           </span>
         </Typography>
 
-        <div className="h-1 w-1 rounded-full bg-white" />
+        <div className="hidden h-1 w-1 rounded-full bg-white md:flex" />
 
         <Typography variant="p">
           Profit:{" "}

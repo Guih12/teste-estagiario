@@ -13,15 +13,15 @@ export default function MoviePage() {
   if (!movieId) return <>Produto não encontrado</>;
 
   return (
-    <div className="p flex w-auto flex-col gap-4">
-      <Button className="self-start" variant="ghost" asChild>
+    <div className="p flex flex-col gap-4">
+      <Button className="md:self-start" variant="ghost" asChild>
         <Link href={configuration.paths.home}>
           <SkipBack />
           Return to movies
         </Link>
       </Button>
 
-      <div className="flex flex-col gap-8 sm:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         <MovieDetailsSidebar movieId={+movieId} />
         <MovieDetails movieId={+movieId} />
       </div>
