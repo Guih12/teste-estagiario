@@ -1,0 +1,73 @@
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.541) !important ;
+    backdrop-filter: blur(0.4); 
+    z-index: 1;
+    border: none;
+}
+
+.ReactModal__Content {
+    margin: auto;
+    min-width: 60%;
+    max-width: 800px;
+    max-height: 80vh;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #1e1e1eb4 !important;
+    backdrop-filter: blur(1.5rem);
+}
+
+/* add a transition effect to modal
+@keyframes slideIn {
+    transform: translate:(-50%, -50%);
+}
+
+
+@keyframes slideOut {
+
+}
+
+.ReactModal__Content--after-open {
+  // add fade-in
+}
+
+.ReactModal__Content--close-open {
+  // add fade-in
+}
+
+*/
+
+.modal-container {
+    display: flex;
+    width: 100%;
+
+    .modal-image {
+        img {
+        width: 300px;
+        border-radius: 8px;
+    }
+    }
+    
+    .modal-content {
+        padding: 1rem;
+        color: var(--text-color);
+        h2 {
+            margin-bottom: 1rem;
+        }
+        p{
+            margin-bottom: 1rem;
+        }
+        button {
+            cursor: pointer;
+            margin-left: auto;
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 0.8rem;
+            background: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 16px;
+        }
+    }
+}
+
