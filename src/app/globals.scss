@@ -4,6 +4,7 @@
 
 :root {
   --bg-color: #1E1E1E;
+  --text-color: #F6F6F6;
   --primary-color: linear-gradient(#F34C30, #DA004E);
 }
 
@@ -16,4 +17,19 @@
 
 body {
   background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(58, 57, 57, 0.514);
+  cursor: pointer; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  cursor: pointer; 
+  border-radius: 8px;
 }
