@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;700&family=Geist+Mono:wght@400;700&display=swap"); /*Importando fontes do google*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1212;
+  color: #ffffff;
+  font-family: "Geist", sans-serif; /*Utilizando a fonte importada*/
+}
+
+.header {
+  background: #ff0000;
+  color: white;
+  text-align: center;
+  padding: 16px;
+
+  h1 > a {
+    color: white;
+    text-decoration: none;
+  }
+}
+// Pagina inicial dos filmes
+.content {
+  padding: 24px;
+}
+/*Footer, modificando apenas as cores e definindo os tamanhos*/
+.footer {
+  background: #271111;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+.movie-list > .grid { /* Aqui esta definindo o espacamento e definindo tambem para a quebra de linha (wrap) para a grade de filmes*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.card { /*Definindo animacoes para os cards*/
+  width: 250px;
+  background-color: rgb(11, 11, 11);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.card img { // definindo o tamnho da imagem e a barrinha q fica em baixo da imagem, separando as informacoes da imagem
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #858585;
+}
+
+.card h3 { // definindo informacoes do titulo do filme
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.card p { // definindo informacoes da data de lancamento
+  font-size: 0.9em;
+  color: #555;
+  margin: 0 10px 10px;
+}
+
+.details-link { // definindo tamanho, animacao e cor do botao 
+  display: inline-block;
+  margin: 10px;
+  color: #8a1e1e;
+  text-decoration: none;
+  border: 1px solid #8a1e1e;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.details-link:hover {
+  background-color: #8a221e;
+  color: white;
+}
+
+@keyframes fadeIn { //animcao para as cores aparecerem no botao
+  to {
+    opacity: 1;
+  }
+}
+
+.card:hover { 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+// Pagina de detalhes
+.movie-details {
+    padding: 24px;
+    background-color: #251d1d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .movie-details h2 {
+    font-size: 2em;
+    margin-bottom: 16px;
+  }
+  
+  .movie-details img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .movie-details p {
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .comments {
+    margin-top: 32px;
+  }
+  
+  .comment-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .comment-input textarea { 
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .comment-input button {
+    padding: 10px 16px;
+    background-color: #8a1e1e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .comment-input button:hover {
+    background-color: #761717;
+  }
+  
+  .comment-list {
+    margin-top: 20px;
+  }
+  
+  .comment {
+    background-color: #312828;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: white
+  }
+  
+
+/*Para avaliacao, estrelinha*/
+
+  .rating {
+    margin-top: 20px;
+  
+    h3 {
+      margin-bottom: 10px;
+    }
+    /*Deixando alinhado um ao lado do outro e definindo espacameto*/
+    .star-rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      
+      input[type="radio"] {
+        display: none;   /*Tirando a bolinha que fica ao lado*/
+      }
+  
+      .star { /*Adicionando uma "animacao"*/
+        font-size: 24px;
+        transition: color 0.2s;
+      }
+    }
+  }
