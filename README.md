@@ -72,3 +72,5 @@ Este é um projeto desenvolvido como parte de um teste técnico para estágio. A
 ```bash
    pnpm run dev
 ```
+### Demo
+- [Clique aqui para acessar a demo](https://teste-estagiario-omega.vercel.app/)
