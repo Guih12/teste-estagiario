@@ -1,14 +1,23 @@
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    position: fixed;
+    width: 100%;
     padding: 0.6rem;
     overflow: hidden;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease-in-out;
+    z-index: 1;
 
     h1 {
         margin: 0 0 0 1rem;
-        color: #FFFFFF;
+        color: var(--text-color);
     }
 
     .navbar {
@@ -22,11 +31,11 @@ header {
             li {
                 a {
                     font-size: 1rem;
-                    color: #FFFFFF;
+                    color: var(--text-color);
                     text-decoration: none;
                 }
                 a:hover {
-                    color: blue;
+                    color: #cfa0a0;
                     text-decoration: none;
                 }
             }
