@@ -1,8 +1,8 @@
-import { tmdb } from "../axios"
+import { tmdb } from "../../axios"
 import { useQuery } from "@tanstack/react-query"
 
 
-const useGetDetailsMovie = (id: string) => {
+const useGetDetailsMovie = (id: number) => {
   const query = useQuery({
     queryKey: ['details-movie', id], queryFn: async () => {
       const { data } = await tmdb.get(`/movie/${id}`)

@@ -1,117 +1,74 @@
+# Teste Técnico - Aplicação de Filmes
 
-# Bem vindo ao teste técnico (Frontend)
+Este é um projeto desenvolvido como parte de um teste técnico para estágio. A aplicação exibe uma lista de filmes populares, permite a paginação entre os filmes, exibe detalhes de cada filme e possibilita que os usuários façam comentários sobre os filmes.
 
-Olá, seja bem-vindo ao teste técnico para a vaga de Estagiário Frontend! Todos os detalhes do teste estão listados abaixo. Lembre-se de que este é apenas um exercício para avaliar suas habilidades, então fique tranquilo e aproveite a oportunidade de aprendizado. Boa sorte!
-## O que estamos esperando de você.
+## 🖥️ Tecnologias Utilizadas
 
-Neste teste técnico, esperamos que você cumpra os seguintes itens:
+- **[Next.js](https://nextjs.org/):** Framework React para renderização do lado do servidor e geração de páginas estáticas.
+- **[Tailwind CSS](https://tailwindcss.com/):** Framework de utilitários CSS para estilização.
+- **[React Query](https://tanstack.com/query/v4):** Gerenciamento de estado assíncrono e cache de dados.
+- **[Nuqs](https://github.com/nuqs/nuqs):** Gerenciamento de query strings para sincronizar estados com a URL.
+- **[ShadCN/UI](https://shadcn.dev/):** Componentes estilizados para construção de interfaces modernas.
+- **[Supabase](https://supabase.io/):** Plataforma de desenvolvimento de aplicativos com banco de dados PostgreSQL.
+- **[The Movie Database (TMDb)](https://www.themoviedb.org/):** API de filmes para obter informações sobre filmes.
 
-- Desenvolver o projeto proposto de acordo com as especificações.
+## 📑 Funcionalidades
 
-- Aproveitar ao máximo o framework, podendo utilizar bibliotecas externas, mas com a explicação clara do motivo de cada escolha.
+- **Página Inicial:**
 
-- Seguir boas práticas de desenvolvimento de código, garantindo qualidade e manutenibilidade.
+  - Exibe uma lista de filmes populares com paginação.
+  - Cada filme é exibido com seu título, imagem e avaliação.
 
-- Demonstrar capacidade de componentizar recursos de forma eficiente e reutilizável.
+- **Detalhes do Filme:**
 
-- Saber fazer consumo de apis.
+  - Ao clicar em um filme, é possível visualizar detalhes como:
+    - Título
+    - Ano de lançamento
+    - Idioma original
+    - Duração
+    - Gêneros
+    - Sinopse
+    - Avaliação
 
-- Saber usar client component ou server component é um diferencial.
+- **Comentários:**
 
-O que não esperamos que você faça:
+  - Os usuários podem adicionar comentários sobre os filmes.
+  - Os comentários são exibidos em ordem cronológica.
 
-- Reinventar a roda: Fique atento ao que está proposto e evite adicionar complexidade desnecessária. Lembre-se: simples é melhor do que complexo e mal feito.
+- **Paginação:**
+  - Navegação entre páginas para explorar mais filmes populares.
 
-- Criar soluções excessivamente complexas: Se optar por uma abordagem mais complexa, certifique-se de estar totalmente convicto da sua escolha e de que ela traz reais benefícios para o projeto.
+## 🚀 Como Executar o Projeto
 
+### Pré-requisitos
 
+- Node.js (versão 18 ou superior)
+- Gerenciador de pacotes (npm ou yarn)
 
-# Dúvidas
+### Passos para rodar o projeto localmente:
 
-Aqui abaixo está a reposta de algumas dúvidas.
+1. **Clone o repositório:**
 
-### Posso usar recursos prontos?
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd teste-estagiario
+   ```
 
-Sim, você pode utilizar, porém deve explicar o motivo do uso e qual o benefício dele no projeto.
-
-### Posso usar IA para me ajudar a fazer o projeto?
-
-Sim, você até pode, mas lembre, estou avaliando o seu desenvolvimento. IA são ferramentas, então não delegue tudo a ela.
-
-### Se eu passar para a próxima etapa, o que será avaliado? 
-
-Eu irei conversar contigo sobre o projeto, perguntarei detalhes, e gostaria de saber as motivações de você ter seguindo com sua implementação.
-
-### HIHIHI tirei vantagem.
-
-Como dito acima, eu irei conversar contigo sobre sua implementação, logo, mesmo que você utilize IA eu vou saber se você pensou ou não.
-
-## Como rodar o projeto
-
-
-Esse é um projeto NextJS 15 versão 15.2.2
-
-Para maiores informações, consulte a documentação: Next.js](https://nextjs.org/docs)
-
-Tenha em sua máquina instalado node versão >= 18. Para mais detalhes, acesse essa ferramenta caso não possua node instalado em sua máquina: https://github.com/nvm-sh/nvm
-
-Clone o repositório em sua máquina e acesse-o
-
-```bash
-cd nome_do_projeto
-```
-
-Rode o seguinte comando para instalar as depedências
-```bash
- npm install
-```
-
-Após instalar, você pode subir a aplicação rodando: 
+2. **instale as dependências:**
 
 ```bash
- npm run dev
+   pnpm install
 ```
 
+3. **Renomeie `.env.local.example` para `.env.local` na raiz do projeto e adicione a chave da API do The Movie Database (TMDb) e do Supabase:**
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=<sua-url-supabase>
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=<sua-chave-anonima-supabase>
+   NEXT_PUBLIC_TMDB_API_KEY=<sua-chave-tmdb>
+   ```
 
-# História
+4. **Inicie o servidor de desenvolvimento:**
 
-Mario é um cliente que está em busca de uma solução para listar filmes em um site. Ele quer um site simples e eficiente, onde os usuários possam explorar diferentes filmes de forma intuitiva. Mario não tem muita experiência técnica, então ele espera que a plataforma seja fácil de usar e visualmente atraente. Ele deseja uma interface agradável que forneça informações básicas sobre os filmes e permita uma navegação tranquila entre eles. Mario acredita que, com uma boa apresentação dos filmes, os usuários terão uma experiência envolvente e agradável.
-
-
-### Requísitos minimos 
-
-Mario espera em seu site as seguintes funcionalidades (MUST TO HAVE): 
-
-* Exibição da Lista de Filmes: O site deve mostrar uma lista de filmes populares. Cada filme deve ter informações como título, imagem do poster, ano de lançamento e descrição curta.
-* Exibição de Detalhes dos Filmes: Ao clicar em um filme, o usuário deve ser levado a uma página ou modal com mais informações sobre ele. A página de detalhes do filme deve conter: (Título completo, Imagem do filme, Ano de lançamento, Gêneros, Duração (tempo de filme em minutos), Classificação indicativa, Nota média dos usuários (rating). Você pode colocar mais informações fica ao seu critério
-
-Mario ficaria contente se tiver as seguintes funcionalidades (NICE TO HAVE) não obrigatório:
-
-* Poder fazer paginação na listagem de filmes
-* Poder fazer comentários a respeito de um filme: (qualquer usuário pode comentar sobre o filme), esses comentários devem ser exibidos na página de detalhes de um filme.
-
-
-### Recursos
-
-Para fazer a busca dos filmes, você canditados devem utilizar a seguinte api: https://developer.themoviedb.org/docs/getting-started (siga a documentação da api para fazer a utilização)
-
-Caso queira fazer a implementação da criação de comentários, você pode estar utilizando essa plataforma aqui: https://supabase.com
-
-
-🏁 Entrega
-
-Para entregar o projeto, siga os passos abaixo:
-
-Abra um Pull Request neste repositório contendo:
-
-- Todo o código da sua aplicação.
-
-- Uma descrição detalhada do seu projeto, incluindo tecnologias utilizadas e principais decisões técnicas. Se possível, grave um vídeo demonstrando o funcionamento da aplicação e anexe ao Pull Request ou forneça um link para o vídeo hospedado (ex: Google Drive, YouTube).
-
-- (Opcional) Deploy da Aplicação: 
-    - Caso deseje fazer o deploy, primeiro faça um fork deste repositório.
-    - Hospede sua aplicação na plataforma de sua escolha (ex: Vercel, Netlify, GitHub Pages, etc.). No Pull Request, inclua o link do projeto em produção junto com os detalhes da implementação.
-
-Dica: Um Pull Request bem organizado e documentado aumenta suas chances de causar uma boa impressão! 🚀
-
-Tempo de entrega: 5 dias no máximo
+```bash
+   pnpm run dev
+```

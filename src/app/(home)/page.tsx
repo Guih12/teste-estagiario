@@ -1,15 +1,14 @@
 "use client"
-import { useGetPopularMovies } from "@/api/hooks/use-popular-movies";
+import { useGetPopularMovies } from "@/api/hooks/movies/use-popular-movies";
 import { Movies } from "@/app/(home)/movies";
-import { Button } from "@/components/ui/button";
 import { usePagination } from "@/hooks/usePagination";
 import { Skeleton } from "@/components/ui/skeleton";
 import { VerticalPagination } from "@/components/vertical-pagination";
 
-export default function Home() {
-
-  const [page, setPage] = usePagination()
-  const { data: movies, isLoading, error } = useGetPopularMovies({ page: page });
+export default function  Home() {
+  
+  const [page] = usePagination()
+  const { data: movies, isLoading } = useGetPopularMovies({ page: page });
   const moviesSkeleton = Array.from({ length: 4 }).map((_, index) => index);
 
   return (

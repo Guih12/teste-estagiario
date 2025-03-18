@@ -1,11 +1,11 @@
-import { tmdb } from "../axios"
+import { tmdb } from "../../axios"
 import { useQuery } from "@tanstack/react-query"
 
 interface useGetPopularMoviesProps {
   page?: number
 }
 
-interface Movie {
+export interface Movie {
   id: number;
   title: string;
   release_date: string;
@@ -15,6 +15,12 @@ interface Movie {
   genre_ids: number[];
 }
 
+export interface PageAndMovies {
+  page: number;
+  movies: Movie[];
+}
+
+
 const useGetPopularMovies = ({ page = 1 }: useGetPopularMoviesProps) => {
   const query = useQuery({
     queryKey: ['popular-movies', page], queryFn: async () => {
@@ -23,7 +29,7 @@ const useGetPopularMovies = ({ page = 1 }: useGetPopularMoviesProps) => {
 
       const pageAndMovies = {
         page: data.page,
-        movies: data.results.map((movie: any): Movie => ({
+        movies: data.results.map((movie:any): Movie => ({
           id: movie.id,
           title: movie.title,
           release_date: movie.release_date,
