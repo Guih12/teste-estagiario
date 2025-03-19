@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "9e43f45f94705cc8e1d5a0400d19a7b7"; 
+const API_KEY = ""; 
 const BASE_URL = "https://api.themoviedb.org/3";
 
 // Buscar filmes populares
