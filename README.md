@@ -8,15 +8,15 @@ Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para ex
 - Navegação entre páginas
 
 ### Tecnologias Utilizadas
-- **RNext.js** (React Framework)
+- **Next.js** (React Framework)
 
-- **RTypeScript** (Tipagem estática)
+- **TypeScript** (Tipagem estática)
 
-- **RTailwind CSS** (Estilização)
+- **Tailwind CSS** (Estilização)
 
-- **RTMDb API** (Fonte de dados)
+- **TMDb API** (Fonte de dados)
 
-- **RShadCN UI** (Componentes reutilizáveis)
+- **ShadCN UI** (Componentes reutilizáveis)
 
 ### Configuração do Projeto
 
