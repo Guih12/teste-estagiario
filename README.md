@@ -2,21 +2,21 @@
 Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para exibir um catálogo de filmes populares e em breve. O projeto utiliza TypeScript, Tailwind CSS e API REST.
 
 ### Funcionalidades
-    - Listagem de filmes populares e futuros lançamentos
-    - Pesquisa de filmes por nome
-    - Exibição de detalhes do filme em um modal
-    - Navegação entre páginas
+- RListagem de filmes populares e futuros lançamentos
+- Pesquisa de filmes por nome
+- Exibição de detalhes do filme em um modal
+- Navegação entre páginas
 
 ### Tecnologias Utilizadas
-    - **Next.js** (React Framework)
+- **RNext.js** (React Framework)
 
-    - **TypeScript** (Tipagem estática)
+- **RTypeScript** (Tipagem estática)
 
-    - **Tailwind CSS** (Estilização)
+- **RTailwind CSS** (Estilização)
 
-    - **TMDb API** (Fonte de dados)
+- **RTMDb API** (Fonte de dados)
 
-    - **ShadCN UI** (Componentes reutilizáveis)
+- **RShadCN UI** (Componentes reutilizáveis)
 
 ### Configuração do Projeto
 
@@ -26,17 +26,18 @@ Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para ex
         npm install
     ```	
 3. Criar um arquivo **.env.local**
-    Crie um arquivo .env.local na raiz do projeto e adicione:
-       ```sh
-            NEXT_PUBLIC_ACCESS_TOKEN=chave_de_autorização_do_token
-        ```	
+-Crie um arquivo .env.local na raiz do projeto e adicione:
+   ```sh
+   NEXT_PUBLIC_ACCESS_TOKEN=chave_de_autorização_do_token
+   ```	
 4. Rodar o projeto localmente
-    ```sh
-        npm run dev
-    ```
-    **Acesse: http://localhost:3000**
+   ```sh
+       npm run dev
+   ```
+**Acesse: http://localhost:3000**
 
 ### Rotas Principais
+
 ```sh
     **Rota**                 Descrição
     /                    Home com filmes populares
