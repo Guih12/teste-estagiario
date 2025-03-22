@@ -26,8 +26,9 @@ Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para ex
         npm install
     ```	
 3. Criar um arquivo **.env.local**
--Crie um arquivo .env.local na raiz do projeto e adicione:
    ```sh
+   Crie um arquivo .env.local na raiz do projeto e adicione:
+
    NEXT_PUBLIC_ACCESS_TOKEN=chave_de_autorização_do_token
    ```	
 4. Rodar o projeto localmente
@@ -39,7 +40,7 @@ Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para ex
 ### Rotas Principais
 
 ```sh
-    **Rota**                 Descrição
+     Rota                 Descrição
     /                    Home com filmes populares
     /MoviePag            Página com catálogo de filmes
 ```
