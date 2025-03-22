@@ -2,7 +2,7 @@
 Este é um projeto desenvolvido em **Next.js** que consome a API do TMDb para exibir um catálogo de filmes populares e em breve. O projeto utiliza TypeScript, Tailwind CSS e API REST.
 
 ### Funcionalidades
-- RListagem de filmes populares e futuros lançamentos
+- Listagem de filmes populares e futuros lançamentos
 - Pesquisa de filmes por nome
 - Exibição de detalhes do filme em um modal
 - Navegação entre páginas
